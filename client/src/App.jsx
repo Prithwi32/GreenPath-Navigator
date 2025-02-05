@@ -17,7 +17,7 @@ import Model from "./components/model.tsx";
 import Journey from "./components/Journey.tsx";
 
 // axios.defaults.baseURL = "http://localhost:5000";
-axios.defaults.baseURL = "https://green-path-navigator-wdh8.vercel.app";
+axios.defaults.baseURL = "https://greenpath-navigator-backend.onrender.com";
 
 axios.defaults.withCredentials = true;
 

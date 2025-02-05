@@ -5,7 +5,10 @@ import "./index.css";
 import App from "./App.jsx";
 import { AuthProvider } from "./context/AuthContext.tsx";
 
-createRoot().render(
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+root.render(
   <StrictMode>
     <AuthProvider>
       <BrowserRouter>
