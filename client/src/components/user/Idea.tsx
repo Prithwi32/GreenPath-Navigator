@@ -58,7 +58,7 @@ const IdeasPage: React.FC = () => {
       setDescription('');
       toast.success('Idea submitted for approval!');
       // Refresh ideas list
-      fetchIdeas();
+      // fetchIdeas();
     } catch (error) {
       console.error('Error submitting idea:', error);
       toast.error('Failed to submit idea');

@@ -1,4 +1,3 @@
-import React from "react";
 import { Treemap, Tooltip } from "recharts";
 
 // Sample Data for Carbon Emissions Reduction
@@ -8,21 +7,21 @@ const carbonData = [
     children: [
       { name: "Electric Vehicles", value: 400 },
       { name: "Public Transport", value: 250 },
-    ]
+    ],
   },
   {
     name: "Buildings",
     children: [
       { name: "Energy Efficient Appliances", value: 300 },
       { name: "Solar Panels", value: 200 },
-    ]
+    ],
   },
   {
     name: "Agriculture",
     children: [
       { name: "Sustainable Farming", value: 150 },
       { name: "Plant-Based Diets", value: 100 },
-    ]
+    ],
   },
 ];
 

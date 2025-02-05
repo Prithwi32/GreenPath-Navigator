@@ -1,4 +1,3 @@
-import React from "react";
 import "./Loader.css"; // Import custom styles
 
 const Loader: React.FC = () => {

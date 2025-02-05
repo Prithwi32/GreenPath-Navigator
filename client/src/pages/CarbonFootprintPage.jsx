@@ -1,4 +1,4 @@
-import CarbonFootprintForm from "@/components/CarbonFootPrint";
+import CarbonFootprintForm from "../components/CarbonFootPrintForm.jsx";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Carbon_Img1 from "../assets/carbon1.jpg";

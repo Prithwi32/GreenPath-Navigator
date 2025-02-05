@@ -1,4 +1,3 @@
-import React from "react";
 import { PieChart, Pie, Tooltip, Cell, Legend } from "recharts";
 
 // Sample Data for Renewable Energy Breakdown
@@ -17,11 +16,15 @@ const EnergySourcePieChart = () => (
     <PieChart width={400} height={400}>
       <Pie
         data={energyData}
-        cx="50%" cy="50%" innerRadius={60} outerRadius={80}
-        fill="#8884d8" paddingAngle={5}
+        cx="50%"
+        cy="50%"
+        innerRadius={60}
+        outerRadius={80}
+        fill="#8884d8"
+        paddingAngle={5}
         dataKey="value"
       >
-        {energyData.map((entry, index) => (
+        {energyData.map((index) => (
           <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
         ))}
       </Pie>

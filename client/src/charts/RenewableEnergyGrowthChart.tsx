@@ -1,5 +1,12 @@
-import React from "react";
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
+import {
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+} from "recharts";
 
 // Sample Data for Renewable Energy Growth
 const renewableGrowthData = [
@@ -18,7 +25,12 @@ const RenewableEnergyGrowthChart = () => (
       <YAxis />
       <Tooltip />
       <Legend />
-      <Area type="monotone" dataKey="renewableEnergy" stroke="#8884d8" fill="#8884d8" />
+      <Area
+        type="monotone"
+        dataKey="renewableEnergy"
+        stroke="#8884d8"
+        fill="#8884d8"
+      />
     </AreaChart>
   </div>
 );

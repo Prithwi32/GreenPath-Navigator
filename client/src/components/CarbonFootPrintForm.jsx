@@ -12,7 +12,7 @@ function CarbonFootprintForm() {
   const [carbonFootprint, setCarbonFootprint] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: { preventDefault: () => void }) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     try {
@@ -39,8 +39,9 @@ function CarbonFootprintForm() {
 
       setCarbonFootprint(data);
       console.log("Carbon footprint calculated:", data);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      console.error("Error calculating carbon footprint:", error.message);
+      console.error("Error calculating carbon footprint");
     } finally {
       setLoading(false);
     }

@@ -1,5 +1,12 @@
-import React from "react";
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Tooltip, Legend } from "recharts";
+import {
+  Radar,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  PolarRadiusAxis,
+  Tooltip,
+  Legend,
+} from "recharts";
 
 // Sample Data for Sustainability Goals
 const sustainabilityGoals = [
@@ -12,11 +19,22 @@ const sustainabilityGoals = [
 
 const SustainabilityGoalsRadarChart = () => (
   <div className="chart-container">
-    <RadarChart outerRadius={90} width={500} height={500} data={sustainabilityGoals}>
+    <RadarChart
+      outerRadius={90}
+      width={500}
+      height={500}
+      data={sustainabilityGoals}
+    >
       <PolarGrid />
       <PolarAngleAxis dataKey="subject" />
       <PolarRadiusAxis angle={30} domain={[0, 100]} />
-      <Radar name="Progress" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+      <Radar
+        name="Progress"
+        dataKey="A"
+        stroke="#8884d8"
+        fill="#8884d8"
+        fillOpacity={0.6}
+      />
       <Tooltip />
       <Legend />
     </RadarChart>

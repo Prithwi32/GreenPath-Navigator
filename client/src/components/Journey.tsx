@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // For redirecting to map page
 
 // Define types for static data
-interface BusRoute {
-  name: string;
-  time: string;
-  pickup: string;
-}
+// interface BusRoute {
+//   name: string;
+//   time: string;
+//   pickup: string;
+// }
 
 interface SustainableData {
   energySaved: string;
@@ -31,14 +31,14 @@ const GreenpathNavigator: React.FC = () => {
   };
 
   // Static data for sustainable paths and CO2 reductions
-  const sustainableData: SustainableData[] = [
-    { energySaved: "5 kWh", co2Reduced: "3.5 kg", path: "CSE to EEE" },
-    { energySaved: "10 kWh", co2Reduced: "7 kg", path: "ECE to MECH" },
-    { energySaved: "15 kWh", co2Reduced: "10 kg", path: "EEE to CIVIL" },
-    { energySaved: "20 kWh", co2Reduced: "13 kg", path: "CSE to CIVIL" },
-    { energySaved: "25 kWh", co2Reduced: "18 kg", path: "CSE to EEE" },
-    { energySaved: "30 kWh", co2Reduced: "20 kg", path: "ECE to MECH" },
-  ];
+  // const sustainableData: SustainableData[] = [
+  //   { energySaved: "5 kWh", co2Reduced: "3.5 kg", path: "CSE to EEE" },
+  //   { energySaved: "10 kWh", co2Reduced: "7 kg", path: "ECE to MECH" },
+  //   { energySaved: "15 kWh", co2Reduced: "10 kg", path: "EEE to CIVIL" },
+  //   { energySaved: "20 kWh", co2Reduced: "13 kg", path: "CSE to CIVIL" },
+  //   { energySaved: "25 kWh", co2Reduced: "18 kg", path: "CSE to EEE" },
+  //   { energySaved: "30 kWh", co2Reduced: "20 kg", path: "ECE to MECH" },
+  // ];
 
   // Data for users
   const bikers = ["Ravi", "Arun", "Pooja", "Neha", "Vikas"];
@@ -64,7 +64,7 @@ const GreenpathNavigator: React.FC = () => {
   };
 
   const showOptions = () => {
-    let options = [];
+    let options: React.SetStateAction<{ label: string; action: string; }[]> = [];
     if (urgency === "no" && hasVehicle === "yes") {
       options = [
         { label: "Walk to Destination", action: "walk" },
@@ -168,10 +168,10 @@ const GreenpathNavigator: React.FC = () => {
     };
   };
 
-  const getRandomSustainableData = (): SustainableData => {
-    // Randomly select data from sustainable data
-    return sustainableData[Math.floor(Math.random() * sustainableData.length)];
-  };
+  // const getRandomSustainableData = (): SustainableData => {
+  //   // Randomly select data from sustainable data
+  //   return sustainableData[Math.floor(Math.random() * sustainableData.length)];
+  // };
 
   const renderBikerPairing = () => {
     if (waitingBikers.length > 0 && readyBikers.length > 0) {

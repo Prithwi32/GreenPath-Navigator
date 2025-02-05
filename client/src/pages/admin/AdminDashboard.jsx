@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {
@@ -15,7 +15,6 @@ import "./AdminDashboard.css";
 import EnergySourcePieChart from "@/charts/EnergySourcePieChart";
 import SustainabilityGoalsRadarChart from "@/charts/SustainablityGoalsRadarChart";
 import RenewableEnergyGrowthChart from "@/charts/RenewableEnergyGrowthChart";
-import CarbonEmissionTreeMap from "@/charts/CarbonEmissionTreeMap";
 import CO2EmissionReductionChart from "@/charts/CO2EmissionReductionChart";
 import Loader from "@/components/Loader";
 
@@ -29,12 +28,12 @@ const data = [
   { name: "November", uv: 3490, pv: 4300 },
 ];
 
-const AdminDashboard: React.FC = () => {
+const AdminDashboard = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [loading, setLoading] = useState(true); // State to control loader visibility
 
   // Handle Date Change
-  const handleDateChange = (date: Date) => {
+  const handleDateChange = () => {
     setSelectedDate(date);
   };
 
